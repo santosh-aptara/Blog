@@ -14,8 +14,6 @@ class Profile(models.Model):
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
-        # If image exists and file is accessible
-
          # Resize only if an image was uploaded
         if self.image and os.path.exists(self.image.path):
             img = Image.open(self.image.path)
