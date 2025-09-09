@@ -12,7 +12,7 @@
                     {% if post.author.profile.image %}
                         <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}" alt="Profile image of {{ post.author.username }}">
                     {% else %}
-                        <img class="rounded-circle article-img" src="{{ STATIC_URL }}images/default.jpg" alt="Default profile image">
+                        <img class="rounded-circle article-img" src="{{ STATIC_URL }}images/default.jpg" alt="No image">
                     {% endif %}
                 </div>
 
