@@ -1,4 +1,5 @@
 {% extends "blog/base.html" %}
+{% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
 
@@ -7,7 +8,7 @@
         <div class="container media">
             <div class="row">
                     <img class="rounded-circle account-img profile-img col-md-6"
-                        src="{{ user.profile.image.url }}">
+                        src="{% if user.profile.image %}{{ user.profile.image.url }}{% else %}{% static 'img/default.jpg' %}{% endif %}">
 
                 <did class="media-body col-md-6">
                     <h2 class="account-heading mt-4">{{ user.username }}</h2>
